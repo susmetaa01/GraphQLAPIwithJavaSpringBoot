@@ -1,0 +1,18 @@
+type VarianceMaster{
+    id: ID!
+    code: String!
+    Name: String!
+    createdOn: String!
+}
+
+type Query {
+    findAllVarianceMasters: [VarianceMaster]!
+}
+
+type Mutation{
+    createVarianceMaster(
+        id: ID!,
+        code: String!,
+        Name: String!,
+        createdOn: String!) : VarianceMaster!
+}

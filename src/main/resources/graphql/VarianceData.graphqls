@@ -1,0 +1,17 @@
+type VarianceData{
+    id: ID!
+    varianceMaster: VarianceMaster!
+    data: String!
+}
+
+extend type Query {
+    findAllVarianceData: [VarianceData]!
+}
+
+extend type Mutation {
+    createVarianceData(
+        id: ID!,
+        varianceMaster: ID!,
+        data: String!
+    ): VarianceData!
+}

@@ -1,0 +1,17 @@
+type VarianceAction{
+    id: ID!
+    varianceData: VarianceData!
+    name: String!
+}
+
+extend type Query {
+    findAllVarianceActions: [VarianceAction]!
+}
+
+extend type Mutation {
+    createVarianceAction(
+        id: ID!,
+        varianceData: ID!,
+        name: String!
+    ): VarianceAction!
+}
